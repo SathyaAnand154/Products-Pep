@@ -1,6 +1,8 @@
-fetch("http://localhost:3000/products")
+fetch("/products")
   .then((res) => res.json())
   .then((data) => {
+    console.log(data);
+
     document.getElementById("loader").style.display = "none";
 
     data.products.forEach((p) => {
